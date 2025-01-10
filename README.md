@@ -14,13 +14,13 @@ instructions on how to use it.
 
 ### Steps
 
-1. ""Clone the Repository:""
+1. *Clone the Repository:*
 
 ```bash
 git clone https://github.com/your-repo/nvim-config.git ~/.config/nvim
 ```
 
-2. ""Install Plugins:""
+2. *Install Plugins:*
 
 Open Neovim and run:
 
@@ -30,7 +30,7 @@ Open Neovim and run:
 
 This will install all plugins defined in the configuration.
 
-3. ""Verify the Setup:"" 
+3. *Verify the Setup:*
 
 Ensure plugins and configurations are working as expected by restarting Neovim
 and testing key features.
