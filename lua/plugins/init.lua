@@ -20,6 +20,7 @@ require("lazy").setup({
 
   -- UI Enhancements
   { "nvim-lualine/lualine.nvim", config = function() require("plugins.ui") end },
+  { "Mofiqul/dracula.nvim", config = function() require("plugins.dracula") end },
 
   -- Development Tools
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
@@ -38,7 +39,19 @@ require("lazy").setup({
   { "lewis6991/gitsigns.nvim", config = function() require("plugins.git") end },
 
   -- lsp & mason & mason-lspconfig
-  { "neovim/nvim-lspconfig", config = function() require("plugins.lsp") end },
+  { "neovim/nvim-lspconfig",
+    dependencies = {
+          "stevearc/conform.nvim",
+          "hrsh7th/cmp-nvim-lsp",
+          "hrsh7th/cmp-buffer",
+          "hrsh7th/cmp-path",
+          "hrsh7th/cmp-cmdline",
+          "hrsh7th/nvim-cmp",
+          "L3MON4D3/LuaSnip",
+          "saadparwaiz1/cmp_luasnip",
+          "j-hui/fidget.nvim",
+      },
+    config = function() require("plugins.lsp") end },
   { "williamboman/mason.nvim", config = function() require("plugins.mason") end },
   { "williamboman/mason-lspconfig", config = function() require("plugins.mason_lspconfig") end },
 
