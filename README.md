@@ -30,8 +30,10 @@ Open Neovim and run:
 
 This will install all plugins defined in the configuration.
 
-3. ""Verify the Setup:"" Ensure plugins and configurations are working as
-   expected by restarting Neovim and testing key features.
+3. ""Verify the Setup:"" 
+
+Ensure plugins and configurations are working as expected by restarting Neovim
+and testing key features.
 
 ## Key Files
 
