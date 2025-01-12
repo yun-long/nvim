@@ -13,6 +13,10 @@ return {
     end,
   },
 
+  {
+    "lukas-reineke/indent-blankline.nvim", enabled = false
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
