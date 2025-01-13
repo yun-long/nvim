@@ -5,6 +5,56 @@ return {
     opts = require "configs.conform",
   },
 
+  {
+    "nvim-neotest/nvim-nio",
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function()
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+    end
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "configs.dap"
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function()
+      require "configs.dap-python"
+    end,
+  },
+
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   ft = {"python"},
+  --   opts = function()
+  --     return require "configs.null-ls"
+  --   end,
+  -- },
+
+  {
+    "williamboman/mason.nvim",
+  },
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
