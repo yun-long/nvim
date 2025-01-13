@@ -24,7 +24,7 @@ map({ "n", "t" }, "<A-i>", function()
 end, { desc = "terminal toggle floating term" })
 
 -- Debug mappings
-map("n", "<leader>d", "", { desc = "Debug" })  -- Debug prefix
+eaap("n", "<leader>d", "", { desc = "Debug" })  -- Debug prefix
 
 -- General debug mappings
 map("n", "<leader>db", function()

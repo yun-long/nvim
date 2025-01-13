@@ -90,7 +90,7 @@ return {
         -- or leave it empty to use the default settings
         windows = {
           ---@type "right" | "left" | "top" | "bottom"
-          position = "bottom",
+          position = "top",
           wrap = true,
           width = 50,
           height = 30,
