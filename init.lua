@@ -36,6 +36,7 @@ vim.schedule(function()
   require "mappings"
 end)
 require("custom.texpresso")
-require("configs.telescope")
 
+-- 
+require("configs.telescope")
 require("configs.cmp")
