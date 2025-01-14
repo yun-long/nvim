@@ -4,9 +4,24 @@ return {
     event = "VeryLazy",
     lazy = false,
     version = false, -- set this to "*" if you want to always pull the latest change, false to update on release
-    opts = {
-      -- add any opts here
-    },
+    config = function()
+      require("avante").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        windows = {
+          ---@type "right" | "left" | "top" | "bottom"
+          position = "top",
+          wrap = true,
+          width = 50,
+          height = 30,
+          sidebar_header = {
+            enabled = true,
+            align = "center",
+            rounded = true,
+          },
+        },
+      })
+    end,
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
