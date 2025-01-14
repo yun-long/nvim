@@ -32,3 +32,21 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 ```shell
 nvim
 ```
+
+#### Features
+
+- Based on AstroNvim
+- File explorer with [Neo-tree]
+- Autocompletion with CMP
+- Git Integration with Gitsigns
+- Statusline, Winbar, and Bufferline
+- Terminal
+- Fuzzy finding
+- Syntax highlighting with Treesitter
+- Formatting and linting with None-is
+- Launguage Server Protocol with Native LSP
+- Debug Adapter Protocol with nvim-dap
+- Copilot
+- Claude Sonnet 3.5
+
+
