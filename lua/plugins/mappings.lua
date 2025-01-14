@@ -26,6 +26,11 @@ return {
           -- NvimTree key map
           ["<Leader>e"] = { "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
           ["<Leader>o"] = { "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+
+          -- ToggleTerm kep map 
+          ["<Leader>tf"] = { "<cmd>ToggleTerm size=30 direction=float<CR>", desc = "ToggleTerm float" },
+          ["<Leader>th"] = { "<cmd>ToggleTerm size=30 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
+          ["<Leader>tv"] = { "<cmd>ToggleTerm size=50 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
         },
         t = {
           -- setting a mapping to false will disable it

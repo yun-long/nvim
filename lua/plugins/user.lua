@@ -5,6 +5,7 @@
 return {
 
   -- == Examples of Adding Plugins ==
+  -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
   {
@@ -35,5 +36,25 @@ return {
       })
       vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
     end,
+  }, 
+
+  {
+    -- override the togglerterm plugin, change the floating terminal size
+    "akinsho/toggleterm.nvim",
+    opts = function(_, opts)
+      opts.float_opts = {
+        border = 'curved',
+        width = 120,
+        height = 40,
+        winblend = 3,
+      }
+      opts.winbar = {
+        enabled = false,
+        name_formatter = function(term) --  term: Terminal
+        return term.name
+      end
+      }
+    end,
   }
+
 }
