@@ -37,6 +37,17 @@ return {
           ["<C-Down>"] = { "<cmd>resize -2<CR>", desc = "Resize window down" },
           ["<C-Left>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize window left" },
           ["<C-Right>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize window right" },
+
+          -- Buffer navigation
+          ["<S-l>"] = { "<cmd>bnext<CR>", desc = "Next buffer" },
+          ["<S-h>"] = { "<cmd>bprevious<CR>", desc = "Previous buffer" },
+          ["<leader>bx"] = { "<cmd>bdelete<CR>", desc = "Close current buffer" },
+
+          -- Quick actions
+          ["<leader>w"] = { "<cmd>w<CR>", desc = "Save file" },
+          ["<leader>q"] = { "<cmd>q<CR>", desc = "Quit" },
+          ["<leader>qa"] = { "<cmd>qa<CR>", desc = "Quit all" },
+          
         },
         t = {
           -- setting a mapping to false will disable it
@@ -47,6 +58,9 @@ return {
           -- stay in indent mode
           ["<"] = { "<gv", desc = "Indent left" },
           [">"] = { ">gv", desc = "Indent right" },
+
+          -- Better paste
+          ["p"] = { '"_dP', desc = "Better paste" },
         }
       },
     },
