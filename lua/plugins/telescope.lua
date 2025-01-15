@@ -10,8 +10,10 @@ return {
         defaults = {
           -- Add your default settings here
           layout_strategy = 'vertical',
+          sorting_strategy = 'ascending',
           layout_config = {
             vertical = {
+              prompt_position = "top",
               width = 0.8,
               height = 0.9,
               preview_height = 0.5,
