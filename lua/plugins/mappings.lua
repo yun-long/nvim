@@ -31,11 +31,23 @@ return {
           ["<Leader>tf"] = { "<cmd>ToggleTerm size=30 direction=float<CR>", desc = "ToggleTerm float" },
           ["<Leader>th"] = { "<cmd>ToggleTerm size=30 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
           ["<Leader>tv"] = { "<cmd>ToggleTerm size=50 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
+
+          -- Resize window with arrows
+          ["<C-Up>"] = { "<cmd>resize +2<CR>", desc = "Resize window up" },
+          ["<C-Down>"] = { "<cmd>resize -2<CR>", desc = "Resize window down" },
+          ["<C-Left>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize window left" },
+          ["<C-Right>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize window right" },
         },
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
         },
+
+        v = {
+          -- stay in indent mode
+          ["<"] = { "<gv", desc = "Indent left" },
+          [">"] = { ">gv", desc = "Indent right" },
+        }
       },
     },
   },
