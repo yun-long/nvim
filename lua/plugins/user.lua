@@ -44,9 +44,9 @@ return {
     opts = function(_, opts)
       opts.float_opts = {
         border = 'curved',
-        width = 120,
+        width = 100,
         height = 40,
-        winblend = 3,
+        winblend = 0, -- disable transparency
       }
       opts.winbar = {
         enabled = false,
