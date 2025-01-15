@@ -1,6 +1,5 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
-
 ---@type LazySpec
 return {
 
@@ -36,7 +35,7 @@ return {
       })
       vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
     end,
-  }, 
+  },
 
   {
     -- override the togglerterm plugin, change the floating terminal size
