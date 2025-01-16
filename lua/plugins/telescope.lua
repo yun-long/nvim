@@ -14,9 +14,9 @@ return {
           layout_config = {
             vertical = {
               prompt_position = "top",
-              width = 0.8,
-              height = 0.9,
-              preview_height = 0.5,
+              width = 0.7,
+              height = 0.4,
+              preview_height = 0.4,
             },
           },
         },

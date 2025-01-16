@@ -44,9 +44,9 @@ return {
           ["<leader>bx"] = { "<cmd>bdelete<CR>", desc = "Close current buffer" },
 
           -- Quick actions
-          ["<leader>w"] = { "<cmd>w<CR>", desc = "Save file" },
-          ["<leader>q"] = { "<cmd>q<CR>", desc = "Quit" },
-          ["<leader>qa"] = { "<cmd>qa<CR>", desc = "Quit all" },
+          ["<Leader>w"] = { "<cmd>w<CR>", desc = "Save file" },
+          ["<Leader>q"] = { "<cmd>q<CR>", desc = "Quit" },
+          ["<Leader>qa"] = { "<cmd>qa<CR>", desc = "Quit all" },
           
         },
         t = {
