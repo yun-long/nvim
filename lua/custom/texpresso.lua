@@ -114,9 +114,7 @@ end
 local function format_fix(line)
   local typ, f, l, txt
   typ, f, l, txt = string.match(line, "([a-z]+): (.*):(%d*): (.*)")
-  if string.match(txt, "^Overfull") or string.match(txt, "^Underfull") then
-    return {}
-  elseif typ then
+  if typ then
     return { type = typ, filename = f, lnum = l, text = txt }
   else
     return { text = line }

@@ -15,6 +15,19 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- Load your custom TeXpresso module
+local texpresso = require("custom.texpresso")
+-- Automatically attach TeXpresso when opening a TeX file
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "tex",
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    if not vim.b[buf].texpresso_attached then
+      texpresso.attach(buf)
+      vim.b[buf].texpresso_attached = true
+    end
+  end,
+})
 
 require "lazy_setup"
 require "polish"
