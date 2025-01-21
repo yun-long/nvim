@@ -7,6 +7,7 @@ if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
@@ -29,6 +30,20 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- 
+
+-- -- avante tab complete
+-- vim.api.nvim_create_autocmd("User", {
+--     pattern = "ToggleMyPrompt",
+--     callback = function()
+--         require("avante.config").override({ system_prompt = "MY CUSTOM SYSTEM PROMPT" })
+--     end,
+-- })
+--
+-- vim.keymap.set("n", "<leader>am", function()
+--     vim.api.nvim_exec_autocmds("User", { pattern = "ToggleMyPrompt" })
+-- end, { desc = "avante: toggle my prompt" })
+ 
 require "lazy_setup"
 require "polish"
 

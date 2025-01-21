@@ -13,11 +13,25 @@ return {
           position = "top",
           wrap = true,
           width = 50,
-          height = 30,
+          -- height = 40,
           sidebar_header = {
-            enabled = true,
+            enabled = false,
             align = "center",
             rounded = true,
+          },
+        },
+        behaviour = {
+          auto_suggestions = false, -- Experimental stage
+          auto_set_highlight_group = true,
+          auto_set_keymaps = true,
+          auto_apply_diff_after_generation = false,
+          support_paste_from_clipboard = false,
+          minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+        },
+        mappings = {
+          suggestion = {
+            next = "<Tab>", -- Use Tab for moving to the next suggestion
+            prev = "<S-Tab>", -- Use Shift-Tab for the previous suggestion
           },
         },
       })
