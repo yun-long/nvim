@@ -12,7 +12,7 @@ return {
           ---@type "right" | "left" | "top" | "bottom"
           position = "top",
           wrap = true,
-          width = 50,
+          -- width = 50,
           -- height = 40,
           sidebar_header = {
             enabled = false,
