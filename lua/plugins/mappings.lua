@@ -25,18 +25,19 @@ return {
 
           -- NvimTree key map
           ["<Leader>e"] = { "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-          ["<Leader>o"] = { "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+          -- ["<Leader>o"] = { "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+          ["<Leader>o"] = { "<cmd>NvimTreeFindFileToggle<CR>", desc = "Find File Toggle NvimTree" },
 
           -- ToggleTerm kep map 
           ["<Leader>tf"] = { "<cmd>ToggleTerm size=30 direction=float<CR>", desc = "ToggleTerm float" },
-          ["<Leader>th"] = { "<cmd>ToggleTerm size=30 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
-          ["<Leader>tv"] = { "<cmd>ToggleTerm size=50 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
+          ["<Leader>th"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
+          ["<Leader>tv"] = { "<cmd>ToggleTerm size=75 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
 
           -- Resize window with arrows
           ["<C-Up>"] = { "<cmd>resize +2<CR>", desc = "Resize window up" },
           ["<C-Down>"] = { "<cmd>resize -2<CR>", desc = "Resize window down" },
-          ["<C-Left>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize window left" },
-          ["<C-Right>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize window right" },
+          ["<S-Left>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize window left" },
+          ["<S-Right>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize window right" },
 
           -- Buffer navigation
           ["<S-l>"] = { "<cmd>bnext<CR>", desc = "Next buffer" },
