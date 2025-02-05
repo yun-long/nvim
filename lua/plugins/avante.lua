@@ -8,6 +8,26 @@ return {
       require("avante").setup({
         -- your configuration comes here
         -- or leave it empty to use the default settings
+        ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
+        provider = "claude", -- Recommend using Claude
+        -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
+        -- currently designating it as `copilot` provider is dangerous because: https://github.com/yetone/avante.nvim/issues/1048
+        -- Of course, you can reduce the request frequency by increasing `suggestion.debounce`.
+        auto_suggestions_provider = "claude",
+        claude = {
+          endpoint = "https://api.anthropic.com",
+          model = "claude-3-5-sonnet-20241022",
+          temperature = 0,
+          max_tokens = 4096,
+        },
+        behaviour = {
+          auto_suggestions = false, -- Experimental stage
+          auto_set_highlight_group = true,
+          auto_set_keymaps = true,
+          auto_apply_diff_after_generation = false,
+          support_paste_from_clipboard = false,
+          minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+        },
         windows = {
           ---@type "right" | "left" | "top" | "bottom"
           position = "right",
@@ -18,14 +38,13 @@ return {
             align = "center",
             rounded = true,
           },
-        },
-        behaviour = {
-          auto_suggestions = false, -- Experimental stage
-          auto_set_highlight_group = true,
-          auto_set_keymaps = true,
-          auto_apply_diff_after_generation = false,
-          support_paste_from_clipboard = false,
-          minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+          ask = {
+            floating = false, -- Open the 'AvanteAsk' prompt in a floating window
+            start_insert = true, -- Start insert mode when opening the ask window
+            border = "rounded",
+            ---@type "ours" | "theirs"
+            focus_on_apply = "ours", -- which diff to focus after applying
+          },
         },
         mappings = {
           suggestion = {
