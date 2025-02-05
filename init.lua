@@ -30,28 +30,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- 
-
--- -- avante tab complete
--- vim.api.nvim_create_autocmd("User", {
---     pattern = "ToggleMyPrompt",
---     callback = function()
---         require("avante.config").override({ system_prompt = "MY CUSTOM SYSTEM PROMPT" })
---     end,
--- })
---
--- vim.keymap.set("n", "<leader>am", function()
---     vim.api.nvim_exec_autocmds("User", { pattern = "ToggleMyPrompt" })
--- end, { desc = "avante: toggle my prompt" })
---
-
 vim.opt.colorcolumn = "120"
 vim.opt.tabstop = 2         -- Number of spaces for a tab
 vim.opt.shiftwidth = 2      -- Number of spaces for each indentation
 vim.opt.softtabstop = 2     -- Number of spaces when pressing Tab
 vim.opt.expandtab = true    -- Use spaces instead of tabs
- 
+
 require "lazy_setup"
 require "polish"
-
-
