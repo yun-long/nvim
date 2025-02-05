@@ -10,10 +10,9 @@ return {
         -- or leave it empty to use the default settings
         windows = {
           ---@type "right" | "left" | "top" | "bottom"
-          position = "top",
+          position = "right",
           wrap = true,
-          width = 50,
-          -- height = 40,
+          width = 30,
           sidebar_header = {
             enabled = false,
             align = "center",
