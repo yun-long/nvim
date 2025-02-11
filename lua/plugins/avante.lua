@@ -28,11 +28,45 @@ return {
           support_paste_from_clipboard = false,
           minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
         },
+        mappings = {
+          --- @class AvanteConflictMappings
+          diff = {
+            ours = "co",
+            theirs = "ct",
+            all_theirs = "ca",
+            both = "cb",
+            cursor = "cc",
+            next = "]x",
+            prev = "[x",
+          },
+          suggestion = {
+            accept = "<M-l>",
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+          jump = {
+            next = "]]",
+            prev = "[[",
+          },
+          submit = {
+            normal = "<CR>",
+            insert = "<C-s>",
+          },
+          sidebar = {
+            apply_all = "A",
+            apply_cursor = "a",
+            switch_windows = "<Tab>",
+            reverse_switch_windows = "<S-Tab>",
+          },
+        },
+        hints = { enabled = true },
         windows = {
           ---@type "right" | "left" | "top" | "bottom"
-          position = "right",
+          position = "top",
           wrap = true,
-          width = 30,
+          -- width = 30,
+          height = 30,
           sidebar_header = {
             enabled = false,
             align = "center",
@@ -51,6 +85,10 @@ return {
             next = "<Tab>", -- Use Tab for moving to the next suggestion
             prev = "<S-Tab>", -- Use Shift-Tab for the previous suggestion
           },
+        },
+        suggestion = {
+          debounce = 100,
+          throttle = 100,
         },
       })
     end,
