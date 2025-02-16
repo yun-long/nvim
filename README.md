@@ -50,3 +50,6 @@ nvim
 - Claude Sonnet 3.5
 
 
+### Nvim verion
+
+NVIM v.0.10.0
