@@ -63,10 +63,10 @@ return {
         hints = { enabled = true },
         windows = {
           ---@type "right" | "left" | "top" | "bottom"
-          position = "top",
+          position = "right",
           wrap = true,
-          -- width = 30,
-          height = 30,
+          width = 30,
+          -- height = 30,
           sidebar_header = {
             enabled = false,
             align = "center",

@@ -9,15 +9,19 @@ return {
       require("telescope").setup({
         defaults = {
           -- Add your default settings here
-          layout_strategy = 'vertical', -- horizontal, vertical, flex
+          layout_strategy = 'horizontal', -- horizontal, vertical, flex
           sorting_strategy = 'ascending',
           layout_config = {
-            prompt_position = "top",
-            width = 0.8,
-            height = 0.5,
-            preview_height = 0.5,
+            horizontal = {
+              prompt_position = "top",
+              preview_width = 0.55,
+            },
+            width = 0.7,
+            height = 0.7,
+            -- preview_height = 0.5,
             -- preview_cutoff = 120,
           },
+          prompt_prefix = "🔍 ",
         },
         extensions = {
           fzf = {
