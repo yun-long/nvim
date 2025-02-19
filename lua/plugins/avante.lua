@@ -68,7 +68,7 @@ return {
           width = 30,
           -- height = 30,
           sidebar_header = {
-            enabled = false,
+            enabled = true,
             align = "center",
             rounded = true,
           },
