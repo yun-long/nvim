@@ -86,6 +86,23 @@ return {
             prev = "<S-Tab>", -- Use Shift-Tab for the previous suggestion
           },
         },
+        highlights = {
+          ---@type AvanteConflictHighlights
+          diff = {
+            current = "DiffText",
+            incoming = "DiffAdd",
+          },
+        },
+        --- @class AvanteConflictUserConfig
+        diff = {
+          autojump = true,
+          ---@type string | fun(): any
+          list_opener = "copen",
+          --- Override the 'timeoutlen' setting while hovering over a diff (see :help timeoutlen).
+          --- Helps to avoid entering operator-pending mode with diff mappings starting with `c`.
+          --- Disable by setting to -1.
+          override_timeoutlen = 500,
+        },
         suggestion = {
           debounce = 100,
           throttle = 100,
@@ -100,7 +117,10 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
+      "echasnovski/mini.pick", -- for file_selector provider mini.pick
+      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+      "ibhagwan/fzf-lua", -- for file_selector provider fzf
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
       "zbirenbaum/copilot.lua", -- for providers='copilot'
       {
