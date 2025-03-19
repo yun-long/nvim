@@ -33,6 +33,13 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 nvim
 ```
 
+Install *ripgrep* for using *live_grep* in Telescope that requires (rg) 
+
+
+```shell
+sudo apt install ripgrep
+```
+
 #### Features
 
 - Based on AstroNvim
