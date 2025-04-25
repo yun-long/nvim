@@ -9,6 +9,7 @@ return {
       require("telescope").setup({
         defaults = {
           -- Add your default settings here
+          -- layout_strategy = 'horizontal', -- horizontal, vertical, flex
           layout_strategy = 'horizontal', -- horizontal, vertical, flex
           sorting_strategy = 'ascending',
           layout_config = {
@@ -16,6 +17,10 @@ return {
               prompt_position = "top",
               preview_width = 0.55,
             },
+            -- vertical = {
+            --   prompt_position = "top",
+            --   preview_height = 0.5,
+            -- },
             width = 0.7,
             height = 0.7,
             -- preview_height = 0.5,
