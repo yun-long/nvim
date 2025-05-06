@@ -1,6 +1,6 @@
 # AstroNvim Template
 
-**NOTE:** This is for AstroNvim v4+
+**NOTE:** This is for AstroNvim v4+ Use NVIM v.0.10.0 only
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
