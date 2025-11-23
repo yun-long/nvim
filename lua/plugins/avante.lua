@@ -11,9 +11,7 @@ return {
     end
   end,
   event = "VeryLazy",
-  version = false, -- Never set this value to "*"! Never!
-  ---@module 'avante'
-  ---@type avante.Config
+  version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
     -- for example
