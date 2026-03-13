@@ -11,7 +11,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "onedark",
+    colorscheme = "vscode",
     highlights = {
       init = {
           -- Window separator (edges)
