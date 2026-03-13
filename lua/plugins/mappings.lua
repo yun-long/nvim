@@ -28,10 +28,22 @@ return {
           -- ["<Leader>o"] = { "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
           ["<Leader>o"] = { "<cmd>NvimTreeFindFileToggle<CR>", desc = "Find File Toggle NvimTree" },
 
-          -- ToggleTerm kep map 
-          ["<Leader>tf"] = { "<cmd>ToggleTerm size=30 direction=float<CR>", desc = "ToggleTerm float" },
-          ["<Leader>th"] = { "<cmd>ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
-          ["<Leader>tv"] = { "<cmd>ToggleTerm size=75 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
+          -- ToggleTerm keymaps
+          ["<Leader>tf"] = { "<cmd>1ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
+          ["<Leader>th"] = { "<cmd>2ToggleTerm size=20 direction=horizontal<CR>", desc = "ToggleTerm horizontal split" },
+          ["<Leader>tv"] = {
+            function()
+              local width = math.floor(vim.o.columns * 0.4)
+              vim.cmd("3ToggleTerm size=" .. width .. " direction=vertical")
+            end,
+            desc = "ToggleTerm vertical split",
+          },
+
+          -- Window navigation
+          ["<C-h>"] = { "<C-w>h", desc = "Move to left window" },
+          ["<C-l>"] = { "<C-w>l", desc = "Move to right window" },
+          ["<C-j>"] = { "<C-w>j", desc = "Move to lower window" },
+          ["<C-k>"] = { "<C-w>k", desc = "Move to upper window" },
 
           -- Resize window with arrows
           ["<C-Up>"] = { "<cmd>resize +2<CR>", desc = "Resize window up" },
@@ -51,8 +63,10 @@ return {
           
         },
         t = {
-          -- setting a mapping to false will disable it
-          -- ["<esc>"] = false,
+          ["<C-h>"] = { "<C-\\><C-n><C-w>h", desc = "Move to left window" },
+          ["<C-l>"] = { "<C-\\><C-n><C-w>l", desc = "Move to right window" },
+          ["<C-j>"] = { "<C-\\><C-n><C-w>j", desc = "Move to lower window" },
+          ["<C-k>"] = { "<C-\\><C-n><C-w>k", desc = "Move to upper window" },
         },
 
         v = {
